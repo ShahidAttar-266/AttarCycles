@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Attar Cycles Marketplace</title>
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="navbar sticky" id="main-header"></header>
+
+    <main class="container section pb-safe">
+        <div class="grid grid-cols-2 gap-3">
+            <div>
+                <h1 class="mb-sm">Get in Touch</h1>
+                <p class="text-muted mb-lg" style="font-size: 1.1rem; line-height: 1.6;">Have a question about a bike? Or want to sell your own? We are here to help you get the best deal at Attar Cycles.</p>
+                
+                <div class="contact-info grid gap-2">
+                    <div class="flex items-center gap-md p-md bg-alt rounded border">
+                        <div class="p-sm bg-color rounded shadow-sm text-primary"><i data-lucide="phone"></i></div>
+                        <div>
+                            <p class="text-xs font-bold text-muted uppercase">Call Us</p>
+                            <p class="font-bold">+91 90115 31687</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-md p-md bg-alt rounded border">
+                        <div class="p-sm bg-color rounded shadow-sm text-primary"><i data-lucide="mail"></i></div>
+                        <div>
+                            <p class="text-xs font-bold text-muted uppercase">Email Us</p>
+                            <p class="font-bold">shahidattar266@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-md p-md bg-alt rounded border">
+                        <div class="p-sm bg-color rounded shadow-sm text-primary"><i data-lucide="map-pin"></i></div>
+                        <div>
+                            <p class="text-xs font-bold text-muted uppercase">Our Hub</p>
+                            <p class="font-bold">Karnal Road, Sangli, Maharashtra</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-lg">
+                    <button class="btn btn-primary btn-lg w-full" style="background:#25d366; border:none; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);" onclick="window.open('https://wa.me/919011531687', '_blank')">
+                        <i data-lucide="message-circle"></i> Chat on WhatsApp
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-alt p-xl rounded-lg border shadow-sm">
+                <h3 class="mb-lg">Send us a Message</h3>
+                <form class="grid gap-2">
+                    <div class="grid gap-1">
+                        <label class="text-xs font-bold text-muted uppercase">Full Name</label>
+                        <input type="text" placeholder="John Doe" class="w-full p-sm rounded border bg-color">
+                    </div>
+                    <div class="grid gap-1">
+                        <label class="text-xs font-bold text-muted uppercase">Email Address</label>
+                        <input type="email" placeholder="john@example.com" class="w-full p-sm rounded border bg-color">
+                    </div>
+                    <div class="grid gap-1">
+                        <label class="text-xs font-bold text-muted uppercase">Subject</label>
+                        <input type="text" placeholder="Selling my bike" class="w-full p-sm rounded border bg-color">
+                    </div>
+                    <div class="grid gap-1">
+                        <label class="text-xs font-bold text-muted uppercase">Message</label>
+                        <textarea placeholder="How can we help?" class="w-full p-sm rounded border bg-color" style="height: 120px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg w-full mt-2">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="whatsapp-fab" class="whatsapp-fab"></div>
+    <footer id="main-footer"></footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="../scripts/components/Navbar.js"></script>
+    <script type="module" src="../scripts/components/WhatsAppBtn.js"></script>
+    <script type="module" src="../scripts/components/Footer.js"></script>
+    <script type="module">
+        import { initNavbar } from '../scripts/components/Navbar.js';
+        import { initWhatsAppBtn } from '../scripts/components/WhatsAppBtn.js';
+        import { initFooter } from '../scripts/components/Footer.js';
+        initNavbar();
+        initWhatsAppBtn();
+        initFooter();
+    </script>
+</body>
+</html>

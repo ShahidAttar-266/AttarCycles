@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attar Cycles Marketplace | Buy & Sell Quality Second-Hand Bikes</title>
+    <meta name="description" content="Find the best deals on pre-owned cycles. Verified sellers, quality checked second-hand bikes.">
+    
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar sticky" id="main-header"></header>
+
+    <!-- Hero -->
+    <section class="hero section bg-alt" style="padding-top: var(--spacing-xxl);">
+        <div class="container grid grid-cols-2 gap-3 items-center">
+            <div class="hero-content">
+                <span class="text-primary font-bold" style="letter-spacing: 2px;">RE-CYCLE, RE-RIDE</span>
+                <h1 class="hero-title" style="margin-top: var(--spacing-xs);">Buy Quality <br><span style="color:var(--primary-color)">Second-Hand</span> Cycles</h1>
+                <p class="text-muted mb-4" style="max-width: 500px; font-size: 1.1rem;">The largest marketplace for pre-owned premium bikes. Quality checked, transparent pricing, and direct seller contact.</p>
+                <div class="flex gap-2">
+                    <a href="#inventory-section" class="btn btn-primary btn-lg">Browse Cycles</a>
+                    <a href="pages/contact.html" class="btn btn-outline btn-lg">Sell Your Cycle</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/hero-image.jpg" alt="Second hand cycle" style="border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg); width: 100%; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories section">
+        <div class="container">
+            <h2 class="text-center mb-4">Shop by Category</h2>
+            <div class="grid grid-cols-4 gap-2" id="category-grid"></div>
+        </div>
+    </section>
+
+    <!-- Featured -->
+    <section class="featured section bg-alt" id="inventory-section">
+        <div class="container">
+            <div class="flex justify-between items-center mb-3">
+                <h2 style="margin: 0;">Explore Our Inventory</h2>
+            </div>
+            <div class="grid grid-cols-3 gap-3" id="featured-grid"></div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating -->
+    <div id="whatsapp-fab" class="whatsapp-fab"></div>
+
+    <footer id="main-footer"></footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

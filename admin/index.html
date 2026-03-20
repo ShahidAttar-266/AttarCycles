@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Attar Cycles Marketplace</title>
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .admin-layout { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+        .sidebar { background: var(--bg-alt); padding: var(--spacing-lg); border-right: 1px solid var(--border-color); }
+        .sidebar-nav { margin-top: 2rem; }
+        .sidebar-nav a { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 8px; margin-bottom: 4px; color: var(--text-muted); }
+        .sidebar-nav a.active { background: var(--primary-color); color: white; }
+        .admin-main { padding: var(--spacing-xl); }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { text-align: left; padding: 1rem; border-bottom: 1px solid var(--border-color); }
+        th { background: var(--bg-alt); font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); }
+        .label { padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; }
+        .label-success { background: #dcfce7; color: #166534; }
+        .label-warning { background: #fef3c7; color: #92400e; }
+    </style>
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="logo">
+                <a href="../index.html" class="flex items-center gap-1">
+                    <span style="font-weight: 800; font-size: 1.25rem;">ATTAR<span style="color:var(--primary-color)">CYCLES</span></span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active" id="nav-leads"><i data-lucide="users"></i> Customer Enquiries</a>
+                <a href="#" id="nav-listings"><i data-lucide="bike"></i> Cycle Inventory</a>
+                <a href="#"><i data-lucide="settings"></i> Settings</a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <div class="flex justify-between items-center mb-4">
+                <h1 id="view-title">Lead Management</h1>
+                <button class="btn btn-primary" id="add-btn" style="display: none;">+ Add Cycle Listing</button>
+            </div>
+
+            <div id="content-table" class="bg-color rounded shadow-sm border overflow-hidden">
+                <!-- Table injected via JS -->
+                 <div style="padding: 100px; text-align: center;">Loading data...</div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="../scripts/pages/admin.js"></script>
+</body>
+</html>
